@@ -1,11 +1,5 @@
 if (!process.env.FLASCHEN_TASCHEN_HOST) {
   throw new Error('FT host parameter not defined.');
-} else if (
-  !process.env.SUBSONIC_SERVER_HOST ||
-  !process.env.SUBSONIC_SERVER_USER ||
-  !process.env.SUBSONIC_SERVER_PASS
-) {
-  throw new Error('Missing Subsonic credentials.');
 } else if (!process.env.LASTFM_USER || !process.env.LASTFM_APIKEY) {
   throw new Error('Missing LastFM credentials.');
 }
@@ -42,13 +36,6 @@ const ft_height =
     ? parseInt(process.env.FLASCHEN_TASCHEN_HEIGHT)
     : 32;
 
-// Subsonic server details.
-const subsonic_host = process.env.SUBSONIC_SERVER_HOST;
-const subsonic_user = process.env.SUBSONIC_SERVER_USER;
-const subsonic_pass = process.env.SUBSONIC_SERVER_PASS;
-// const lastfm_user = process.env.LASTFM_USER;
-// const lastfm_apikey = process.env.LASTFM_APIKEY;
-
 // Polling frequency - how often the subsonic server should poll for the now-playing endpoint updates.
 // Default 10 seconds
 const poll_frequency =
@@ -72,9 +59,6 @@ const config = {
   ft_port,
   ft_width,
   ft_height,
-  subsonic_host,
-  subsonic_pass,
-  subsonic_user,
   poll_frequency,
   subsonic_fetch_dimension,
   lastFmNowPlayingUrl,
