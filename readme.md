@@ -120,3 +120,5 @@ $ ft-server --led-rows=64 --led-cols=64 --led-brightness=60 --led-slowdown-gpio=
 With the above settings I get a pretty solid refresh rate of around 112Hz. I lower the brightness of the output to 60%, to reduce overall power consumption and avoid washed-out images. A fully lit display (RGB 255,255,255 over 4096 pixels) at these settings draws around 1-1.1 amps (~5.2W).
 
 Please note that the settings are going to vary from system-to-system and display-to-display - what works for me may not work well for you. I recommend diving into the [FT server documentation](https://github.com/hzeller/rpi-rgb-led-matrix#changing-parameters-via-command-line-flags) to tweak your own display to your liking.
+
+For a subsonic-API version of this app, check out [this project](https://github.com/telekineticyeti/subsonic-nowplaying-rgb-display).
