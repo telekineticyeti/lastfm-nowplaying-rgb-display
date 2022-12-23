@@ -2,7 +2,7 @@
 version: '2'
 services:
   lastfm-nowplaying-rgb-display:
-    build: https://github.com/telekineticyeti/lastfm-nowplaying-rgb-display
+    build: https://github.com/telekineticyeti/lastfm-nowplaying-rgb-display.git
     container_name: lastfm-nowplaying-rgb-display
     restart: unless-stopped
     environment:
